@@ -42,14 +42,14 @@ graph TD
 
 ### From MarketPlace
 
-1. Download the `.vsix` from [MarketPlace](https://marketplace.visualstudio.com/items?itemName=ONGYISHEN.sdg17)
+1. Download the `.vsix` from [MarketPlace](https://marketplace.visualstudio.com/items?itemName=ONGYISHEN.sdg22)
 2. Double-click to install
 3. Restart Visual Studio
 
 ### From Source
 
 1. Clone this repo
-2. Open `SolutionDependencyGraph.sln` in Visual Studio 2022
+2. Open `SolutionDependencyGraph.sln` in Visual Studio 2022 / 2026
 3. Press **F5** to launch the experimental instance
 
 ## Requirements

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidVS2022DependencyGraphPackage">
+
+    <Groups>
+      <Group guid="guidGenerateGraphCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+        <!-- IDM_VS_CTXT_SOLNNODE = Solution node right-click context menu -->
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_SOLNNODE"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidGenerateGraphCommandPackageCmdSet" id="GenerateGraphCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidGenerateGraphCommandPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidCommandIcons" id="iconGraph" />
+        <Strings>
+          <ButtonText>Generate Dependency Graph</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidGenerateGraphCommandPackageCmdSet" id="RestoreGraphCommandId" priority="0x0200" type="Button">
+        <Parent guid="guidGenerateGraphCommandPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidCommandIcons" id="iconJson" />
+        <Strings>
+          <ButtonText>Generate Restore Graph (JSON)</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidGenerateGraphCommandPackageCmdSet" id="ProjectListCommandId" priority="0x0300" type="Button">
+        <Parent guid="guidGenerateGraphCommandPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidCommandIcons" id="iconList" />
+        <Strings>
+          <ButtonText>Generate Project List</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidCommandIcons" href="Resources\CommandIcons.png" usedList="iconGraph, iconJson, iconList"/>
+    </Bitmaps>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidVS2022DependencyGraphPackage" value="{e264f0d6-38a0-491b-beda-3a59e3498f8d}" />
+
+    <GuidSymbol name="guidGenerateGraphCommandPackageCmdSet" value="{194e01af-e30b-4ebc-b424-53b6a25f08dc}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="GenerateGraphCommandId" value="0x0100" />
+      <IDSymbol name="RestoreGraphCommandId" value="0x0200" />
+      <IDSymbol name="ProjectListCommandId" value="0x0300" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidCommandIcons" value="{a1b2c3d4-1234-5678-abcd-ef0123456789}">
+      <IDSymbol name="iconGraph" value="1" />
+      <IDSymbol name="iconJson" value="2" />
+      <IDSymbol name="iconList" value="3" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

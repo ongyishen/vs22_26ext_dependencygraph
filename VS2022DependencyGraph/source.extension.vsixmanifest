@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="VS2022DependencyGraph.1f4280a5-1b9e-4e28-b211-ea6553ea9e8c" Version="1.0.1" Language="en-US" Publisher="ongyishen" />
+    <DisplayName>Solution Dependency Graph (VS2022)</DisplayName>
+    <Description xml:space="preserve">Generate Mermaid dependency graphs, NuGet restore graphs, and project lists from your Visual Studio solution — all from a right-click context menu on the Solution node.
+
+Features:
+• Generate Dependency Graph — Scans all .csproj files and their ProjectReference entries, outputs a Mermaid diagram (dependency-graph.mmd)
+• Generate Restore Graph (JSON) — Runs MSBuild /t:GenerateRestoreGraphFile to produce a full NuGet dependency graph (_restore_graph.json)
+• Generate Project List — Extracts all .csproj paths from the .sln file into a sorted text file (_projects_from_sln.txt)
+
+All output files are saved to the solution root folder. Open .mmd files in VS Code with the Mermaid Preview extension or paste into mermaid.live.</Description>
+    <MoreInfo>https://github.com/ongyishen/vs17ext_dependencygraph</MoreInfo>
+    <Icon>Resources\icon.png</Icon>
+    <PreviewImage>Resources\icon.png</PreviewImage>
+    <Tags>dependency graph, mermaid, solution, csproj, project reference, nuget, restore graph, architecture, visualization</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+    <InstallationTarget Id="Microsoft.VisualStudio.Professional" Version="[17.0, 18.0)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+    <InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[17.0, 18.0)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+  </Dependencies>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+  </Assets>
+</PackageManifest>
